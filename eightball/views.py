@@ -4,7 +4,7 @@ import random
 
 # Create your views here.
 def index(request):
-    file = open(r"C:\Users\maxim\Documents\webservices\examen\eightball\eightball.txt")
+    file = open(r"eightball\eightball.txt")
     eightball = file.readlines()
     answer = eightball[random.randint(0, len(eightball) - 1)]
     return render(request, 'eightball/index.html', {'eightball': answer})
